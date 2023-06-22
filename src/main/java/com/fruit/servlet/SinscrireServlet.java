@@ -29,7 +29,7 @@ public class SinscrireServlet extends HttpServlet {
 		//CHECK IF USER IS NULL 
 		
 			
-			getServletContext().getRequestDispatcher("/WEB-INF/add-utilisateur.jsp");
+			getServletContext().getRequestDispatcher("/WEB-INF/add-utilisateur.jsp").forward(req, resp);
 	
 	
 	}
