@@ -1,4 +1,3 @@
-com\fruit\filter\GestionPageFilter.class
 com\fruit\DaoImpl\CommandeDaoImpl.class
 com\fruit\DaoImpl\LigneDeCommandeDaoImpl.class
 com\fruit\metier\Categorie_.class

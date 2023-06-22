@@ -47,10 +47,10 @@
     <url-pattern>/</url-pattern>
   </filter-mapping>
 
-	 <filter>
+	<!--  <filter>
       <filter-name>GestionPages</filter-name>
     <filter-class>com.fruit.filter.GestionPageFilter</filter-class>
-  </filter>
+  </filter> -->
 
   
   <filter-mapping>

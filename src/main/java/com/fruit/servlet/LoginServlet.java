@@ -39,10 +39,6 @@ public class LoginServlet extends HttpServlet{
 		String password = req.getParameter("password");
 		System.out.println("User à taper ses indentifiants => email :  " + email + " |  password : " + password);
 		
-		
-//		utilisateur.setEmail(email);
-//		utilisateur.setPassword(password);
-		
 		HttpSession session=req.getSession();
 		
 		Utilisateur utilisateur = findUtilisateur(email, password); 
