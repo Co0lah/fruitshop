@@ -71,7 +71,7 @@ public class LoginFilter implements Filter {
 
 			}else {
 				System.out.println("Pas d'utilisateur connecté, page de connexeion");
-				req.getRequestDispatcher("/WEB-INF/login-utilisateur.jsp").forward(request, response);
+				chain.doFilter(request, response);
 			}
 		}else {
 			 chain.doFilter(request, response );

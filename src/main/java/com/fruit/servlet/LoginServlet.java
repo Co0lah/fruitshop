@@ -24,8 +24,10 @@ public class LoginServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("Login Servlet");		
+	
+
+			getServletContext().getRequestDispatcher("/WEB-INF/login-utilisateur.jsp").forward(req, resp);
 		
-		getServletContext().getRequestDispatcher("/WEB-INF/login-utilisateur.jsp").forward(req, resp);
 	}
 	
 	@Override

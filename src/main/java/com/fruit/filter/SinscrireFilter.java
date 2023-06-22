@@ -26,15 +26,38 @@ public class SinscrireFilter implements Filter{
 			throws IOException, ServletException {
 		System.out.println("Register Filter BEGIN");
 		HttpServletRequest req = (HttpServletRequest) request;
-		HttpSession session = req.getSession();
-		
-		Utilisateur utilisateur = (Utilisateur) session.getAttribute("utilisateur"); 
-		if(utilisateur != null) {
-			System.out.println("Utilisateur déja connecté, retour à l'acceuil");
-			req.getRequestDispatcher("/WEB-INF/acceuil.jsp").forward(request, response);
+		if(!req.getMethod().equals("POST")  ) {
+			
+			HttpSession session = req.getSession();
 
+			Utilisateur utilisateur = (Utilisateur) req.getSession().getAttribute("utilisateur");
+			
+
+			if (utilisateur != null) {
+				String profil = utilisateur.getProfil();
+				System.out.println("Utilisateur connecté, redirection vers une des pages de gestion ");
+				// TODO change to profil enum
+				if(profil != null) {
+					if (utilisateur.getProfil().equals("Magasinier")) {
+						req.getRequestDispatcher("/WEB-INF/gestion-articles.jsp").forward(request, response);
+					} else if (utilisateur.getProfil().equals("Admin")) {
+						req.getRequestDispatcher("/WEB-INF/gestion-admin.jsp").forward(request, response);
+
+					} else {
+						req.getRequestDispatcher("/WEB-INF/gestion-achats.jsp").forward(request, response);
+					}
+				}else {
+					session.removeAttribute("utilisateur");
+					req.getRequestDispatcher("/WEB-INF/login-utilisateur.jsp").forward(request, response);
+				}
+			
+
+			}else {
+				System.out.println("Pas d'utilisateur connecté, page d'inscription");
+				chain.doFilter(request, response);
+			}
 		}else {
-			req.getRequestDispatcher("/WEB-INF/add-utilisateur.jsp").forward(request, response);
+			 chain.doFilter(request, response );
 		}
 		
 		// TODO Auto-generated method stub

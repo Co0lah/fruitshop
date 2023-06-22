@@ -27,16 +27,10 @@ public class SinscrireServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//CHECK IF USER IS NULL 
-		HttpSession session = req.getSession();
 		
-		Utilisateur utilisateur = (Utilisateur)session.getAttribute("utilisateur");
-		if(utilisateur == null ) {
 			
 			getServletContext().getRequestDispatcher("/WEB-INF/add-utilisateur.jsp");
-			
-		}else {
-			getServletContext().getRequestDispatcher("/WEB-INF/acceuil.jsp");
-		}
+	
 	
 	}
 	
