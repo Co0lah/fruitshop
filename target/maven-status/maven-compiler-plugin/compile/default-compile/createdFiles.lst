@@ -1,3 +1,4 @@
+com\fruit\filter\GestionPageFilter.class
 com\fruit\DaoImpl\CommandeDaoImpl.class
 com\fruit\DaoImpl\LigneDeCommandeDaoImpl.class
 com\fruit\metier\Categorie_.class
@@ -7,12 +8,12 @@ com\fruit\DaoImpl\CategorieDaoImpl.class
 com\fruit\metier\Adresse.class
 com\fruit\metier\Params_.class
 com\fruit\metier\Params.class
+com\fruit\servlet\SinscrireServlet.class
 com\fruit\filter\HomeFilter.class
 com\fruit\metier\Commande_.class
 Main.class
 com\fruit\metier\CartePaiement.class
 com\fruit\metier\Commentaire.class
-com\fruit\servlet\Sinscrire.class
 com\fruit\metier\Adresse_.class
 com\fruit\metier\LigneDeCommande_.class
 com\fruit\DaoImpl\CartePaiementDaoImpl.class

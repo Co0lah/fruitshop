@@ -46,22 +46,40 @@
     <filter-name>HomeFilter</filter-name>
     <url-pattern>/home</url-pattern>
   </filter-mapping>
+
+	 <filter>
+      <filter-name>GestionPages</filter-name>
+    <filter-class>com.fruit.filter.GestionPageFilter</filter-class>
+  </filter>
+
+  
+  <filter-mapping>
+    <filter-name>GestionPages</filter-name>
+    <url-pattern>/gestion</url-pattern>
+  </filter-mapping>
+
+	
   <filter>
-    <filter-name>LoginFilter</filter-name>
+      <filter-name>LoginFilter</filter-name>
     <filter-class>com.fruit.filter.LoginFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>LoginFilter</filter-name>
     <url-pattern>/login</url-pattern>
   </filter-mapping>
+
+
+
   <filter>
-    <filter-name>SinscrireFilter</filter-name>
+      <filter-name>SinscrireFilter</filter-name>
     <filter-class>com.fruit.filter.SinscrireFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>SinscrireFilter</filter-name>
     <url-pattern>/inscription</url-pattern>
   </filter-mapping>
+  
+  
   <servlet>
     <servlet-name>Faces Servlet</servlet-name>
     <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>

@@ -25,34 +25,81 @@
 		<h1>S'inscrire</h1>
 
 
-		<form>
+		<form method="POST" action="inscription">
 
 			<div class="form-group">
 				<label for="nom">Nom</label>
-				 <input	type="text" class="form-control" name"nom" id="exampleInputEmail1"> 
+				 <input	type="text" class="form-control" name="nom" required> 
 			</div>
 			
 			<div class="form-group">
 				<label for="nom">Prenom</label>
-				 <input	type="text" class="form-control" name"nom" id="exampleInputEmail1"> 
+				 <input	type="text" class="form-control" name="prenom" required> 
+			</div>
+			
+			<div class="form-group">
+				<label for="nom">Prenom</label>
+				 <input	type="text" class="form-control" name="dateNaissance" required>
+				 <small> Format dd/MM/YYYY</small> 
 			</div>
 			
 			<div class="form-group">
 				<label for="nom">email</label>
-				 <input	type="text" class="form-control" name"nom" id="exampleInputEmail1"> 
+				 <input	type="email" class="form-control" name="email" required> 
 			</div>
 			
 			<div class="form-group">
-				<label for="nom">dateNaissance</label>
-				 <input	type="text" class="form-control" name"nom" id="exampleInputEmail1"> 
+				<label for="nom">Choisissez un mot de passe</label>
+				 <input	type="password" class="form-control" name="password" required > 
 			</div>
 			
-			 <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-
+			<div class="form-group">
+				<label for="nom">Téléphone</label>
+				 <input	type="number" class="form-control" name="telephone" > 
+			</div>
+			
+			<div class="form-group my-4">
+				<h4>Adresse</h4>
+				<label for="numeroRue">N°</label>
+				 <input	type="number" class="form-control" name="numeroRue" required> 
+				
+				<label for="rue">Rue</label>
+				 <input	type="text" class="form-control" name="rue" required> 
+				 
+				 <label for="codePostal">Code Postal</label>
+				 <input	type="number" class="form-control" name="codePostal" required> 
+				 	
+				 
+				 <label for="ville">Ville</label>
+				 <input	type="text" class="form-control" name="ville" required> 	
+		
+			</div>
+			
+			
+			<div class="form-group my-4">
+			<h4>Carte de paiement</h4>
+			
+				<label for="nomProprietaire" >Nom du Proprietaire</label>
+				 <input	type="text" class="form-control" name="nomProprietaire" > 
+			
+				<label for="prenomProprietaire">Prenom</label>
+				 <input	type="text" class="form-control" name="prenomProprietaire" > 
+				 
+				 <label for="numeroCarte">N° de carte</label>
+				 <input	type="number" class="form-control" name="numeroCarte" > 
+				 
+				 <label for="cryptogramme">Cryptogramme</label>
+				 <input	type="number" class="form-control" name="cryptogramme" > 
+				 
+				 <div class="form-group">
+				<label for="dateExpiration">Date s'expiration</label>
+				 <input	type="number" class="form-control" name="dateExpiration" >
+				 <small> Format MM/YY</small> 
+			</div>
+			</div>
+			
+			<button class="btn btn-primary" type="submit" >S'inscrire </button>
+	
 
 
 

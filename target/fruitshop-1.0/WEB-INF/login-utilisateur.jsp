@@ -28,7 +28,7 @@
 	<input type="password" name="password"></input>
 	
 	<button type="submit" class="btn btn-primary">Se connecter</button>
-	<!-- <a href="inscription" class="btn btn-primary">S'inscrire</a> -->
+	<p>Vous n'avez pas de compte ? <a href="inscription" class="btn btn-primary">S'inscrire</a></p>
 	
 	</form>
 	
