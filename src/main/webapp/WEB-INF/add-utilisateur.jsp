@@ -25,7 +25,7 @@
 		<h1>S'inscrire</h1>
 
 
-		<form method="POST" action="inscription">
+		<form method="post" action="inscription">
 
 			<div class="form-group">
 				<label for="nom">Nom</label>
@@ -95,7 +95,7 @@
 				<label for="dateExpiration">Date s'expiration</label>
 				 <input	type="number" class="form-control" name="dateExpiration" >
 				 <small> Format MM/YY</small> 
-			</div>
+				</div>
 			</div>
 			
 			<button class="btn btn-primary" type="submit" >S'inscrire </button>

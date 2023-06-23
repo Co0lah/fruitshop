@@ -35,9 +35,27 @@
     <servlet-name>Logout</servlet-name>
     <url-pattern>/logout</url-pattern>
   </servlet-mapping>
+  
+  
+   <servlet>
+    <description>C'est une servlet</description>
+    <display-name>SinscrireServlet</display-name>
+    <servlet-name>SinscrireServlet</servlet-name>
+    <servlet-class>com.fruit.servlet.SinscrireServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SinscrireServlet</servlet-name>
+    <url-pattern>/inscription</url-pattern>
+  </servlet-mapping>
+  
+  
+  
   <welcome-file-list>
     <welcome-file>home.jsp</welcome-file>
   </welcome-file-list>
+ 
+ 
+ 
   <filter>
     <filter-name>HomeFilter</filter-name>
     <filter-class>com.fruit.filter.HomeFilter</filter-class>

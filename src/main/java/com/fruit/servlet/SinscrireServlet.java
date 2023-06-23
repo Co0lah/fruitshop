@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.fruit.DaoImpl.AdresseDaoImpl;
+import com.fruit.DaoImpl.CartePaiementDaoImpl;
+import com.fruit.DaoImpl.UtilisateurDaoImpl;
 import com.fruit.metier.Adresse;
 import com.fruit.metier.CartePaiement;
 import com.fruit.metier.Utilisateur;
@@ -59,6 +62,7 @@ public class SinscrireServlet extends HttpServlet {
 		utilisateur.setEmail(email);
 		utilisateur.setPassword(password);
 		utilisateur.setTelephone(telephone);
+		utilisateur.setProfil("Client");
 		
 		com.fruit.metier.Adresse adresse = new com.fruit.metier.Adresse(); 
 		adresse.setNumero(Integer.parseInt(numeroRue));
@@ -74,11 +78,34 @@ public class SinscrireServlet extends HttpServlet {
 		cartePaiement.setCryptogramme(cryptogramme);
 		cartePaiement.setUtilisateur(utilisateur);
 		
-		
+		inscrireUtilisateur(utilisateur, adresse, cartePaiement);
 		
 		System.out.println("nom:" + nom);
 		
 		req.getRequestDispatcher("/WEB-INF/acceuil.jsp").forward(req, resp);
+	}
+	
+	public void inscrireUtilisateur(Utilisateur utilisateur, Adresse adresse, CartePaiement cartePaiement) {
+		
+		try {
+			UtilisateurDaoImpl u = new UtilisateurDaoImpl();
+			AdresseDaoImpl a = new AdresseDaoImpl(); 
+			CartePaiementDaoImpl c = new CartePaiementDaoImpl(); 
+			
+			u.create(utilisateur);
+			a.create(adresse);
+			
+			if(cartePaiement.getNumero() != null && cartePaiement.getNomProprietaire() != null) {
+				
+				c.create(cartePaiement);
+			}
+			System.out.println("User adresse et carte sauvegardés en BDD");
+			
+		}catch(Exception ex) {
+			
+		}
+		
+		
 	}
 	
 }

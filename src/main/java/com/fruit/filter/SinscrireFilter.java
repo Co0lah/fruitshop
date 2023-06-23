@@ -17,7 +17,7 @@ public class SinscrireFilter implements Filter{
 
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
@@ -30,7 +30,7 @@ public class SinscrireFilter implements Filter{
 		
 		Utilisateur utilisateur = (Utilisateur) session.getAttribute("utilisateur"); 
 		
-		if(!req.getMethod().equals("POST")) {
+		if(!req.getMethod().equalsIgnoreCase("post")) {
 		
 			if(utilisateur != null) {
 				System.out.println("Utilisateur connecté, redirection vers une des pages de gestion ");
@@ -51,6 +51,7 @@ public class SinscrireFilter implements Filter{
 			}
 			
 		}else {
+			System.out.println("SinscrireFilter : POST request");
 			chain.doFilter(request, response);
 		}
 		
