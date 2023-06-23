@@ -38,12 +38,12 @@ public class SinscrireFilter implements Filter{
 				
 				// TODO change to profil enum
 				if (utilisateur.getProfil().equals("Magasinier")) {
-					req.getRequestDispatcher("/WEB-INF/gestion-articles.jsp").forward(request, response);
+					req.getRequestDispatcher("/gestion-articles").forward(request, response);
 				} else if (utilisateur.getProfil().equals("Admin")) {
-					req.getRequestDispatcher("/WEB-INF/gestion-admin.jsp").forward(request, response);
+					req.getRequestDispatcher("/gestion-admin").forward(request, response);
 
 				} else {
-					req.getRequestDispatcher("/WEB-INF/gestion-achats.jsp").forward(request, response);
+					req.getRequestDispatcher("/gestion-achats").forward(request, response);
 				}
 
 			}else {
