@@ -12,14 +12,7 @@
 </head>
 <body>
 
-	<div id="header">
-
-		
-		<header class="bg-warning">
-			<h4 style="text-align: center">Fruitstore</h4>
-		</header>
-	</div>
-		<h1> Bienvenue chez fruitstore</h1>
+		<%@ include file="header.jsp"%>
 	
 	<div id="menu">Menu</div>
 	

@@ -56,12 +56,14 @@ public class LoginFilter implements Filter {
 				// TODO change to profil enum
 				if(profil != null) {
 					if (utilisateur.getProfil().equals("Magasinier")) {
-						req.getRequestDispatcher("/WEB-INF/gestion-articles.jsp").forward(request, response);
+						req.getRequestDispatcher("/gestion-articles").forward(request, response);
 					} else if (utilisateur.getProfil().equals("Admin")) {
-						req.getRequestDispatcher("/WEB-INF/gestion-admin.jsp").forward(request, response);
+						
+						System.out.println("Login filter: forward admin ");
+						req.getRequestDispatcher("/gestion-admin").forward(request, response);
 
 					} else {
-						req.getRequestDispatcher("/WEB-INF/gestion-achats.jsp").forward(request, response);
+						req.getRequestDispatcher("/gestion-achats.jsp").forward(request, response);
 					}
 				}else {
 					session.removeAttribute("utilisateur");

@@ -10,9 +10,11 @@
 
 </head>
 <body>
-<header>
-	<p><%= session.getAttribute("nom") %> <%= session.getAttribute("prenom") %> </p>
-
-</header>
+	<%@ include file="header.jsp"%>
+	
+	<h1> Page de gestion administrateur</h1>
+	
+	
+		<a class="btn btn-danger" href="logout"> Se Deconnecter </a>
 </body>
 </html>

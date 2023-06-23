@@ -67,13 +67,13 @@ public class LoginServlet extends HttpServlet{
 					
 					if(utilisateur.getProfil().equals("Admin")) {
 						System.out.println("ADMIN PAGE");
-						getServletContext().getRequestDispatcher("/WEB-INF/gestion-admin.jsp").forward(req, resp);
+						getServletContext().getRequestDispatcher("/gestion-admin").forward(req, resp);
 					}else if (utilisateur.getProfil().equals("Magasinier")) {
 						System.out.println("MAGASINIER PAGE");
-						getServletContext().getRequestDispatcher("/WEB-INF/gestion-articles.jsp").forward(req, resp);
+						getServletContext().getRequestDispatcher("/gestion-articles").forward(req, resp);
 					}else {
 						System.out.println("CLIENT PAGE");
-						getServletContext().getRequestDispatcher("/WEB-INF/gestion-achats.jsp").forward(req, resp); 
+						getServletContext().getRequestDispatcher("/gestion-achats").forward(req, resp); 
 					}
 					
 				}else {

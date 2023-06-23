@@ -10,9 +10,6 @@
 
 </head>
 <body>
-<header>
-	<p><%= session.getAttribute("nom") %> <%= session.getAttribute("prenom") %> </p>
-
-</header>
+	<%@ include file="header.jsp"%>
 </body>
 </html>

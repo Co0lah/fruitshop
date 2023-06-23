@@ -48,6 +48,27 @@
     <url-pattern>/inscription</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+    <description>C'est une servlet</description>
+    <display-name>GestionArticleServlet</display-name>
+    <servlet-name>GestionArticleServlet</servlet-name>
+    <servlet-class>com.fruit.servlet.GestionArticleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GestionArticleServlet</servlet-name>
+    <url-pattern>/gestion-articles</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description>C'est une servlet</description>
+    <display-name>GestionAdminServlet</display-name>
+    <servlet-name>GestionAdminServlet</servlet-name>
+    <servlet-class>com.fruit.servlet.GestionAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GestionAdminServlet</servlet-name>
+    <url-pattern>/gestion-admin</url-pattern>
+  </servlet-mapping>
   
   
   <welcome-file-list>
@@ -96,6 +117,27 @@
     <filter-name>SinscrireFilter</filter-name>
     <url-pattern>/inscription</url-pattern>
   </filter-mapping>
+  
+  
+  <filter>
+      <filter-name>GestionArticleFilter</filter-name>
+    <filter-class>com.fruit.filter.GestionArticleFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>GestionArticleFilter</filter-name>
+    <url-pattern>/gestion-articles</url-pattern>
+  </filter-mapping>
+  
+    <filter>
+      <filter-name>GestionAdminFilter</filter-name>
+    <filter-class>com.fruit.filter.GestionAdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>GestionAdminFilter</filter-name>
+    <url-pattern>/gestion-admin</url-pattern>
+  </filter-mapping>
+  
+  
   
   
   <servlet>

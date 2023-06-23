@@ -21,11 +21,15 @@ public class GestionPageFilter implements Filter {
 		
 	}
 
+	/**
+	 * S'assure que le client est bien est un utilisateur connecté sinon redirige à l'acceuil
+	 */
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		
 		System.out.println("Gestion de pages Filter START");
+		
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpSession session = req.getSession();
 		

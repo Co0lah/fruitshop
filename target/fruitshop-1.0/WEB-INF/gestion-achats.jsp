@@ -14,16 +14,21 @@
 
 </head>
 <body>
-
-	<header class="bg-warning">
-		<p><%=session.getAttribute("nom")%>
-			<%=session.getAttribute("prenom")%>
-		</p>
-
-	</header>
+	<%@ include file="header.jsp"%>
 
 	<div class="container">
-		<h1>Gestion des achats</h1>
+	   <%
+        String username = (String)session.getAttribute("username");
+        if(username==null)  {
+    %>            
+        <p> username is null</p> //html code
+    <%
+        } else {
+    %>
+        <p> username is not null</p> //html code
+    <%
+        }
+    %>
 
 	</div>
 

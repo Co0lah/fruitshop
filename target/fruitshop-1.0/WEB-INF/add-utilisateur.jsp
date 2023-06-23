@@ -16,10 +16,7 @@
 <body>
 
 
-	<header class="bg-warning">
-		<h4 style="text-align: center">Fruitstore</h4>
-	</header>
-
+	<%@ include file="header.jsp"%>
 	<div class="container">
 
 		<h1>S'inscrire</h1>
@@ -38,7 +35,7 @@
 			</div>
 			
 			<div class="form-group">
-				<label for="nom">Prenom</label>
+				<label for="nom">Date de Naissance</label>
 				 <input	type="text" class="form-control" name="dateNaissance" required>
 				 <small> Format dd/MM/YYYY</small> 
 			</div>
